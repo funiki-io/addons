@@ -1,0 +1,7 @@
+{
+  "domain": "funiki",
+  "name": "Home Assistant Funiki Api",
+  "dependencies": ["http"],
+  "codeowners": ["@home-assistant/core"],
+  "quality_scale": "internal"
+}
