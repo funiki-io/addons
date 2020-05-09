@@ -1,0 +1,7 @@
+{
+  "hassio_host": "127.0.0.1",
+  "hassio_port": "8123",
+  "cloud_api_url": "https://api.sumittripathi.website/api/v1",
+  "device_id": "",
+  "cloud_auth_token": ""
+}
