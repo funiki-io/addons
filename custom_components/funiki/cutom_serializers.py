@@ -19,6 +19,7 @@ class HassIoSerializers :
         return summary
 
 
+
     @staticmethod
     def deviceSerializers( deviceRegistry: DeviceRegistry):
         devices = {}
