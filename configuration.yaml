@@ -9,8 +9,18 @@ default_config:
 # Text to speech
 api:
 
+mqtt:
+  discovery: true
+  broker: 127.0.0.1
+  birth_message:
+    topic: 'hass/status'
+    payload: 'online'
+  will_message:
+    topic: 'hass/status'
+    payload: 'offline'
+
 funiki:
-  
+
 tts:
   - platform: google_translate
 
