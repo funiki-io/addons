@@ -1,20 +1,45 @@
 
-# Configure a default setup of Home Assistant (frontend, api, etc)
-default_config:
+version: "3.8"
+services:
+  hassio:
+    ports:
+      - 8123:8123
+    image: homeassistant/raspberrypi3-homeassistant:stable
+    container_name: hassio
+    volumes:
+      - /data/hassio_confg:/config
+    network_mode: host
+    healthcheck:
+         test: ["CMD", "curl", "-f", "http://127.0.0.1:8123"]
+         interval: 1m30s
+         timeout: 10s
+         retries: 3
 
-# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
-# http:
-#   base_url: example.duckdns.org:8123
+  mosquitto:
+    image: eclipse-mosquitto
+    hostname: mosquitto
+    container_name: mosquitto
+    networks:
+        - default
+    expose:
+        - "1883"
+        - "9001"
+    ports:
+        - "1883:1883"
+        - "9001:9001"
+    volumes:
+        - ./mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf
 
-# Text to speech
-api:
-
-funiki:
-  
-tts:
-  - platform: google_translate
-
-group: !include groups.yaml
-automation: !include automations.yaml
-script: !include scripts.yaml
-scene: !include scenes.yaml
+  zigbee2mqtt:
+      container_name: zigbee2mqtt
+      image: koenkk/zigbee2mqtt
+      volumes:
+        - /data/zwave2mqtt:/app/data
+        - /data/zwave2mqtt/run/udev:/run/udev:ro
+      devices:
+        - /dev/ttyACM0:/dev/ttyACM0
+      restart: always
+      network_mode: host
+      privileged: true
+      environment:
+        - TZ=Europe/Amsterdam
