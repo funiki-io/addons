@@ -1,0 +1,14 @@
+{
+    "data": {
+        "items": [
+            {
+                "device_trackers": [],
+                "id": "funiki_system_user",
+                "name": "funiki_system_user",
+                "user_id": "ed118294a9cb4eb1a8e025d85190162b"
+            }
+        ]
+    },
+    "key": "person",
+    "version": 2
+}
