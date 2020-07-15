@@ -7,8 +7,8 @@
                 "data": {
                     "username": "funiki_system_user"
                 },
-                "id": "17246f3b730241d79db040a27828025b",
-                "user_id": "ed118294a9cb4eb1a8e025d85190162b"
+                "id": "a1c8db02252f4631a0ca5160dda7ffb1",
+                "user_id": "55854f64c2264a00a882e670f8b4c59c"
             }
         ],
         "groups": [
@@ -31,14 +31,14 @@
                 "client_icon": null,
                 "client_id": "http://192.168.68.117:8123/",
                 "client_name": null,
-                "created_at": "2020-07-04T21:35:07.409541+00:00",
-                "id": "160752eff38e4116a37cceb22225f2d0",
-                "jwt_key": "b483ba4eae4fca010fb8f29edba9187fffaf5912e68db233da2cd237f0d9f993de791d273a8fcf306fcd7d1b163bda4f96b562296579c1a08c1a6620ed58fd68",
-                "last_used_at": "2020-07-04T21:35:07.409725+00:00",
+                "created_at": "2020-07-15T02:43:50.463788+00:00",
+                "id": "3ed92b076d9a4c8cbbdec7914a1cb288",
+                "jwt_key": "79c253986e6ae05af03dc88b05dc42f3e7079da3acded75ab5247b795060072369964bb921944dfa398e0b61006bde55533d01f1f98993addff1f4060289b075",
+                "last_used_at": "2020-07-15T02:43:50.464112+00:00",
                 "last_used_ip": "192.168.68.111",
-                "token": "e72d7a1b1923fcfb3758a38049eab2f8724ef3494fcec7d9ff56f2c97d5b55c3f1856cb443e4447c29dbb4f91ae1d2939e1460b134c614a2a7097245bf863663",
+                "token": "6f2f705ce916ef73ff6e058efe69b621ec1e1887cb4c7d1e39be6805850dbffc47424eab7a65fa734bbccd10449bbc071a7538d84545548a6be943713506bee8",
                 "token_type": "normal",
-                "user_id": "ed118294a9cb4eb1a8e025d85190162b"
+                "user_id": "55854f64c2264a00a882e670f8b4c59c"
             }
         ],
         "users": [
@@ -46,7 +46,7 @@
                 "group_ids": [
                     "system-admin"
                 ],
-                "id": "ed118294a9cb4eb1a8e025d85190162b",
+                "id": "55854f64c2264a00a882e670f8b4c59c",
                 "is_active": true,
                 "is_owner": true,
                 "name": "funiki_system_user",
