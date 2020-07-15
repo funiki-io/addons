@@ -1,26 +1,5 @@
 {
-    "data": [
-        {
-            "last_seen": "2020-07-15T02:44:32.363981+00:00",
-            "state": {
-                "attributes": {
-                    "editable": true,
-                    "friendly_name": "funiki_system_user",
-                    "id": "funiki_system_user",
-                    "user_id": "55854f64c2264a00a882e670f8b4c59c"
-                },
-                "context": {
-                    "id": "48af37cb8406497b9af9373eab2eed50",
-                    "parent_id": null,
-                    "user_id": null
-                },
-                "entity_id": "person.funiki_system_user",
-                "last_changed": "2020-07-15T02:43:24.409859+00:00",
-                "last_updated": "2020-07-15T02:43:24.409859+00:00",
-                "state": "unknown"
-            }
-        }
-    ],
+    "data": [],
     "key": "core.restore_state",
     "version": 1
 }

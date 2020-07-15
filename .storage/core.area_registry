@@ -2,15 +2,15 @@
     "data": {
         "areas": [
             {
-                "id": "1f2192fc003b4095a3a806ed42d3bb39",
+                "id": "41966a063a1d4a3c95e3e855c5d23bb9",
                 "name": "Living Room"
             },
             {
-                "id": "5dc63da207924aa0bd2c622afaa0be91",
+                "id": "5a5291c194224bf98044a1942b3c40a3",
                 "name": "Kitchen"
             },
             {
-                "id": "1cb8045791844792951a784f2d361ce5",
+                "id": "8931e831083e4fc4b0272bfc0c288d2a",
                 "name": "Bedroom"
             }
         ]
