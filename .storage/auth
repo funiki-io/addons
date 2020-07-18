@@ -1,0 +1,59 @@
+{
+    "data": {
+        "credentials": [
+            {
+                "auth_provider_id": null,
+                "auth_provider_type": "homeassistant",
+                "data": {
+                    "username": "funiki_system_user"
+                },
+                "id": "fff81697a68f4cd691405ef37a4f4ea5",
+                "user_id": "0ae88e3e6a09414b86be0275cd2172ac"
+            }
+        ],
+        "groups": [
+            {
+                "id": "system-admin",
+                "name": "Administrators"
+            },
+            {
+                "id": "system-users",
+                "name": "Users"
+            },
+            {
+                "id": "system-read-only",
+                "name": "Read Only"
+            }
+        ],
+        "refresh_tokens": [
+            {
+                "access_token_expiration": 1800.0,
+                "client_icon": null,
+                "client_id": "http://localhost:8123/",
+                "client_name": null,
+                "created_at": "2020-07-18T06:54:20.662605+00:00",
+                "id": "c009b22524f643f28930b634027a0255",
+                "jwt_key": "bcfa9f59c6227a25dbe3d740d23e08d1141b6b2ddf32028d60cf8910cf64554d8c50d92cc9c3a316a6283a606148470827533f43ce3c22cf45bbed539426a72e",
+                "last_used_at": "2020-07-18T06:54:20.662678+00:00",
+                "last_used_ip": "127.0.0.1",
+                "token": "2775a04bf3dbcfbff2bec439f2dd102c9cd6b378b4461316064af4ea760af084036f46b621ee6cff3121dfb66e917f6517dbd6b345e33ea3d21da28d3840bb22",
+                "token_type": "normal",
+                "user_id": "0ae88e3e6a09414b86be0275cd2172ac"
+            }
+        ],
+        "users": [
+            {
+                "group_ids": [
+                    "system-admin"
+                ],
+                "id": "0ae88e3e6a09414b86be0275cd2172ac",
+                "is_active": true,
+                "is_owner": true,
+                "name": "funiki_system_user",
+                "system_generated": false
+            }
+        ]
+    },
+    "key": "auth",
+    "version": 1
+}

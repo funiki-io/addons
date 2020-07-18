@@ -6,6 +6,8 @@ from .cutom_serializers import HassIoSerializers
 from homeassistant.components.http import HomeAssistantView
 import homeassistant.core as ha
 from homeassistant.helpers.service import async_get_all_descriptions
+from .const import  ONBOARDING_DOMAIN ,ONBOARDING_STEP_USER ,ONBOARDING_STEP_CORE_CONFIG ,ONBOARDING_STEP_INTEGRATION
+
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -17,13 +19,30 @@ def setup(hass, config):
     hass.http.register_view(FunikiDeviceView)
     hass.http.register_view(FunikiEntitiesView)
     hass.http.register_view(FunikiAreaView)
+    hass.http.register_view(FunikiOnBoardingStatus)
     return True
+
+class FunikiOnBoardingStatus(HomeAssistantView):
+    url = "/api/onboardingstatus"
+    name = "api:onboardingstatus"
+    requires_auth = False
+    @ha.callback
+    def get(self, request):
+        hass = request.app["hass"]
+        import os.path
+        dataDir = "%s/%s/onboarding" % (hass.config.config_dir, '.storage')
+        if os.path.exists(dataDir) and os.path.isfile(dataDir) :
+            with open(dataDir) as f:
+                data = json.load(f)
+                hass.data['onboardingstatus'] =data;
+                return self.json_message(data)
+
+        return self.json_message({})
 
 
 class FunikiSummaryView(HomeAssistantView):
     url = "/api/summary"
     name = "api:summary"
-
     @ha.callback
     def get(self, request):
         hass = request.app["hass"]
@@ -44,7 +63,6 @@ class FunikiDeviceView(HomeAssistantView):
 class FunikiEntitiesView(HomeAssistantView):
     url = "/api/hassio/entites"
     name = "api:hassio-entites-list"
-
     @ha.callback
     def get(self, request):
         hass = request.app["hass"]

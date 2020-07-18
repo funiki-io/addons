@@ -1,0 +1,6 @@
+
+ONBOARDING_DOMAIN = "onboarding"
+ONBOARDING_STEP_USER = "user"
+ONBOARDING_STEP_CORE_CONFIG = "core_config"
+ONBOARDING_STEP_INTEGRATION = "integration"
+

@@ -12,13 +12,29 @@ class HassIoSerializers :
         device_registry = hass.data['device_registry'];
         entity_registry = hass.data['entity_registry'];
         area_registry = hass.data['area_registry'];
+        onboarding_status = hass.data['onboardingstatus'];
+
         summary.update( {'area' : HassIoSerializers.areaSerializers(areRegistry=area_registry)})
         summary.update( {'entities' : HassIoSerializers.entitySerializers(entityRegistry= entity_registry)})
         summary.update( {'devices' : HassIoSerializers.deviceSerializers(deviceRegistry=device_registry)})
+        summary.update({'onboarding_status': HassIoSerializers.deviceSerializers(deviceRegistry=device_registry)})
 
         return summary
 
 
+
+    @staticmethod
+    def deviceSerializers( deviceRegistry: DeviceRegistry):
+        devices = {}
+        for key, deviceEntry in deviceRegistry.devices.items():
+            devices.update( {key: { 'id' : deviceEntry.id ,
+                                    'area_id' : deviceEntry.area_id,
+                                    'model' : deviceEntry.model,
+                                    'config_entries' : deviceEntry.config_entries ,
+                                    'name' :deviceEntry.name
+                                    }
+                             })
+        return devices
     @staticmethod
     def deviceSerializers( deviceRegistry: DeviceRegistry):
         devices = {}
