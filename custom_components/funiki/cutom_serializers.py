@@ -12,12 +12,9 @@ class HassIoSerializers :
         device_registry = hass.data['device_registry'];
         entity_registry = hass.data['entity_registry'];
         area_registry = hass.data['area_registry'];
-        onboarding_status = hass.data['onboardingstatus'];
-
         summary.update( {'area' : HassIoSerializers.areaSerializers(areRegistry=area_registry)})
         summary.update( {'entities' : HassIoSerializers.entitySerializers(entityRegistry= entity_registry)})
         summary.update( {'devices' : HassIoSerializers.deviceSerializers(deviceRegistry=device_registry)})
-        summary.update({'onboarding_status': HassIoSerializers.deviceSerializers(deviceRegistry=device_registry)})
 
         return summary
 
