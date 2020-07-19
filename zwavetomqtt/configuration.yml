@@ -1,0 +1,7 @@
+homeassistant: true
+permit_join: true
+mqtt:
+  base_topic: hass
+  server: 'mqtt://localhost'
+serial:
+  port: /dev/ttyACM0
