@@ -8,14 +8,11 @@ from homeassistant.const import HTTP_BAD_REQUEST
 class FunikiUserView(HomeAssistantView):
     url = "/api/funiki/user"
     name = "api:funiki:user"
-    requires_auth = False
-
     @ha.callback
     async def post(self, request):
         hass = request.app["hass"]
         provider =_get_provider(hass)
         await provider.async_initialize()
-
         msg = None
         try:
             msg = await request.json()
@@ -57,8 +54,6 @@ class FunikiUserView(HomeAssistantView):
 class FunikiDeleteUserView(HomeAssistantView):
     url = "/api/funiki/user/{user_id}"
     name = "api:funiki:delete:user"
-    requires_auth = False
-
     @ha.callback
     async def delete(self, request, user_id):
         hass = request.app["hass"]

@@ -15,10 +15,7 @@ class HassIoSerializers :
         summary.update( {'area' : HassIoSerializers.areaSerializers(areRegistry=area_registry)})
         summary.update( {'entities' : HassIoSerializers.entitySerializers(entityRegistry= entity_registry)})
         summary.update( {'devices' : HassIoSerializers.deviceSerializers(deviceRegistry=device_registry)})
-
         return summary
-
-
 
     @staticmethod
     def deviceSerializers( deviceRegistry: DeviceRegistry):
