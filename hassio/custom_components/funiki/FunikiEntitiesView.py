@@ -4,9 +4,9 @@ from homeassistant.components.http import HomeAssistantView
 import homeassistant.core as ha
 
 class FunikiEntitiesView(HomeAssistantView):
-    url = "/api/funiki/entites"
+    url = "/api/funikientites"
     name = "api:funiki-entites-list"
-
+    requires_auth = False
     @ha.callback
     def get(self, request):
         hass = request.app["hass"]
