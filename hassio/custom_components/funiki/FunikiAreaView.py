@@ -12,6 +12,7 @@ from homeassistant.const import HTTP_BAD_REQUEST
 class FunikiAreasView(HomeAssistantView):
     url = "/api/funikiarea"
     name = "api:funiki-area"
+    requires_auth = False
 
     @ha.callback
     def get(self, request):
@@ -43,6 +44,7 @@ class FunikiAreasView(HomeAssistantView):
 class FunikiAreaDeleteView(HomeAssistantView):
     url = "/api/funikiarea/{area_id}"
     name = "api:funiki-area:delete"
+    requires_auth = False
 
     @ha.callback
     async def delete(self, request , area_id):

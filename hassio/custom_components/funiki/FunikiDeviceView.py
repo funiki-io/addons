@@ -6,6 +6,7 @@ import homeassistant.core as ha
 class FunikiDeviceView(HomeAssistantView):
     url = "/api/funikidevice"
     name = "api:funiki-device-list"
+    requires_auth = False
 
     @ha.callback
     def get(self, request):
